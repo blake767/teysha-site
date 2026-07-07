@@ -313,3 +313,61 @@ footer{padding:32px 0; text-align:center; color:var(--text-faint); font-size:0.8
   font-family:'IBM Plex Mono', monospace;
 }
 @media (max-width:640px){ .sample-preview-cols{grid-template-columns:1fr;} }
+
+/* ---------- PRICING ---------- */
+.pricing-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+  margin-bottom:32px;
+}
+@media (max-width:768px){ .pricing-grid{grid-template-columns:1fr;} }
+.pricing-card{
+  background:var(--bg-panel);
+  padding:36px 32px;
+  display:flex;
+  flex-direction:column;
+}
+.pricing-card.featured{
+  background:var(--bg-panel-raised);
+  position:relative;
+}
+.pricing-badge{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.68rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--gold);
+  border:1px solid var(--gold);
+  display:inline-block;
+  padding:3px 10px;
+  margin-bottom:16px;
+  align-self:flex-start;
+}
+.pricing-name{ font-family:'Cormorant SC', serif; font-size:1.5rem; font-weight:600; margin-bottom:6px; }
+.pricing-for{ color:var(--text-dim); font-size:0.95rem; margin-bottom:20px; font-style:italic; }
+.pricing-amount{ font-family:'Cormorant SC', serif; font-size:2.4rem; font-weight:600; color:var(--gold); line-height:1; margin-bottom:4px; }
+.pricing-timeline{ font-family:'IBM Plex Mono', monospace; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-faint); margin-bottom:24px; }
+.pricing-includes{ margin-bottom:28px; flex-grow:1; }
+.pricing-includes .item{
+  font-size:0.98rem;
+  color:var(--text-dim);
+  padding:9px 0;
+  border-top:1px solid var(--line);
+}
+.pricing-includes .item:first-child{ border-top:none; }
+.pricing-note{
+  border:1px solid var(--line);
+  background:var(--bg-panel);
+  padding:24px 28px;
+  font-size:0.95rem;
+  color:var(--text-dim);
+}
+.pricing-note strong{ color:var(--text); }
+.pricing-faq{ margin-top:12px; }
+.pricing-faq-item{ padding:22px 0; border-top:1px solid var(--line); }
+.pricing-faq-item:last-child{ border-bottom:1px solid var(--line); }
+.pricing-faq-item h3{ font-size:1.1rem; margin-bottom:8px; }
+.pricing-faq-item p{ color:var(--text-dim); font-size:0.98rem; }
