@@ -1,5 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="10" fill="#262A3B"/>
-  <text x="32" y="41" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" fill="#F5EDDA" text-anchor="middle">T</text>
-  <path d="M32 46 L33.3 50.2 L37.5 51.5 L33.3 52.8 L32 57 L30.7 52.8 L26.5 51.5 L30.7 50.2 Z" fill="#B15530"/>
+  <rect width="64" height="64" rx="10" fill="#1B2B4A"/>
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#C8963E" stroke-width="2.8"/>
+  <g fill="none" stroke="#C8963E" stroke-width="2.2" stroke-linejoin="round">
+    <polygon points="32,14 50,32 32,50 14,32"/>
+    <polygon points="32,14 50,32 32,50 14,32" transform="rotate(45 32 32)"/>
+  </g>
+  <circle cx="32" cy="32" r="4" fill="#C8963E"/>
 </svg>
