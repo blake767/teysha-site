@@ -3,308 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Teysha — Sales Consulting by Blake Davidson</title>
-<meta name="description" content="Teysha: 10 years of full-cycle B2B sales execution behind every engagement. Outbound pipeline systems, deal-size expansion, and AE coaching for revenue teams ready to move upmarket.">
+<title>Teysha — Sales Process Consulting by Blake Davidson</title>
+<meta name="description" content="Teysha: sales process consulting for post-PMF teams. Ten years of full-cycle B2B sales execution, twice at companies HubSpot went on to acquire.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#F2F0E8;
-    --bg-panel:#EAE6D9;
-    --bg-panel-raised:#E3DECD;
-    --text:#161A2B;
-    --text-dim:#565C72;
-    --text-faint:#8A8E9E;
-    --gold:#A32F26;
-    --gold-dim:#C4645C;
-    --teal:#1E4B63;
-    --line:#D9D3C1;
-    --line-strong:#B8AF97;
-    --radius:2px;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Inter', sans-serif;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3{
-    font-family:'Fraunces', serif;
-    font-weight:600;
-    letter-spacing:-0.01em;
-    color:var(--text);
-  }
-  .mono{
-    font-family:'IBM Plex Mono', monospace;
-  }
-  a{color:inherit; text-decoration:none;}
-  .wrap{
-    max-width:1080px;
-    margin:0 auto;
-    padding:0 32px;
-  }
-  @media (max-width:640px){ .wrap{padding:0 20px;} }
-
-  /* ---------- NAV ---------- */
-  nav{
-    position:sticky; top:0; z-index:100;
-    background:rgba(242,240,232,0.92);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  nav .wrap{
-    display:flex; align-items:center; justify-content:space-between;
-    height:64px;
-  }
-  .nav-name{
-    font-family:'Fraunces', serif;
-    font-weight:600;
-    font-size:1.05rem;
-    letter-spacing:0.01em;
-  }
-  .nav-links{
-    display:flex; gap:28px; font-size:0.85rem;
-    color:var(--text-dim);
-  }
-  .nav-links a:hover{color:var(--text);}
-  .nav-cta{
-    border:1px solid var(--line-strong);
-    padding:8px 16px;
-    font-size:0.8rem;
-    color:var(--text);
-    white-space:nowrap;
-  }
-  .nav-cta:hover{border-color:var(--gold); color:var(--gold);}
-  @media (max-width:768px){ .nav-links{display:none;} }
-
-  /* ---------- HERO ---------- */
-  header.hero{
-    padding:96px 0 64px;
-    border-bottom:1px solid var(--line);
-  }
-  .eyebrow{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.72rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--teal);
-    margin-bottom:20px;
-  }
-  h1.headline{
-    font-size:clamp(2.3rem, 5vw, 3.6rem);
-    line-height:1.08;
-    max-width:15ch;
-    margin-bottom:24px;
-  }
-  h1.headline em{
-    font-style:italic;
-    color:var(--gold);
-  }
-  .hero-sub{
-    font-size:1.05rem;
-    color:var(--text-dim);
-    max-width:52ch;
-    margin-bottom:40px;
-  }
-  .hero-actions{
-    display:flex; gap:16px; align-items:center; flex-wrap:wrap;
-    margin-bottom:56px;
-  }
-  .btn-primary{
-    background:var(--gold);
-    color:#F5F2E8;
-    padding:14px 26px;
-    font-size:0.9rem;
-    font-weight:600;
-    border-radius:var(--radius);
-  }
-  .btn-primary:hover{background:#8A2620;}
-  .btn-ghost{
-    color:var(--text-dim);
-    font-size:0.9rem;
-    border-bottom:1px solid var(--line-strong);
-    padding-bottom:2px;
-  }
-  .btn-ghost:hover{color:var(--text); border-color:var(--text-dim);}
-
-  /* scoreboard readout */
-  .scoreboard{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    border:1px solid var(--line);
-    background:var(--bg-panel);
-  }
-  .scoreboard div{
-    padding:22px 20px;
-    border-right:1px solid var(--line);
-  }
-  .scoreboard div:last-child{border-right:none;}
-  .scoreboard .num{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:1.9rem;
-    font-weight:600;
-    color:var(--gold);
-    line-height:1;
-    margin-bottom:8px;
-  }
-  .scoreboard .label{
-    font-size:0.72rem;
-    color:var(--text-dim);
-    text-transform:uppercase;
-    letter-spacing:0.06em;
-  }
-  @media (max-width:640px){
-    .scoreboard{grid-template-columns:1fr;}
-    .scoreboard div{border-right:none; border-bottom:1px solid var(--line);}
-    .scoreboard div:last-child{border-bottom:none;}
-  }
-
-  /* ---------- SECTION SHELL ---------- */
-  section{padding:80px 0; border-bottom:1px solid var(--line);}
-  .section-head{margin-bottom:48px; max-width:60ch;}
-  .section-tag{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.72rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--text-faint);
-    margin-bottom:14px;
-  }
-  .section-head h2{font-size:clamp(1.6rem, 3vw, 2.1rem);}
-  .section-head p{color:var(--text-dim); margin-top:14px; font-size:0.98rem;}
-
-  /* ---------- LEDGER (track record) ---------- */
-  .ledger-row{
-    display:grid;
-    grid-template-columns:90px 1fr 100px 200px;
-    align-items:center;
-    gap:20px;
-    padding:18px 0;
-    border-top:1px solid var(--line);
-  }
-  .ledger-row:last-child{border-bottom:1px solid var(--line);}
-  .ledger-year{
-    font-family:'IBM Plex Mono', monospace;
-    color:var(--text-dim);
-    font-size:0.9rem;
-  }
-  .ledger-context{font-size:0.9rem; color:var(--text-dim);}
-  .ledger-context strong{color:var(--text); font-weight:500;}
-  .ledger-pct{
-    font-family:'IBM Plex Mono', monospace;
-    text-align:right;
-    color:var(--gold);
-    font-weight:600;
-    font-size:0.95rem;
-  }
-  .ledger-bar-track{
-    height:6px;
-    background:var(--bg-panel);
-    border:1px solid var(--line);
-    position:relative;
-  }
-  .ledger-bar-fill{
-    height:100%;
-    background:var(--gold-dim);
-  }
-  @media (max-width:768px){
-    .ledger-row{grid-template-columns:60px 1fr 70px; }
-    .ledger-bar-track{display:none;}
-  }
-
-  /* ---------- SERVICES ---------- */
-  .services-grid{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-  }
-  .service-card{
-    background:var(--bg);
-    padding:32px;
-  }
-  .service-card .num{
-    font-family:'IBM Plex Mono', monospace;
-    color:var(--teal);
-    font-size:0.8rem;
-    margin-bottom:16px;
-    display:block;
-  }
-  .service-card h3{font-size:1.15rem; margin-bottom:12px; font-weight:600;}
-  .service-card p{color:var(--text-dim); font-size:0.92rem;}
-  @media (max-width:768px){ .services-grid{grid-template-columns:1fr;} }
-  .services-grid.cols-3{grid-template-columns:repeat(3, 1fr);}
-  @media (max-width:768px){ .services-grid.cols-3{grid-template-columns:1fr;} }
-
-  /* ---------- ABOUT ---------- */
-  .about-layout{
-    display:grid;
-    grid-template-columns:1.5fr 1fr;
-    gap:56px;
-  }
-  .about-copy p{color:var(--text-dim); margin-bottom:18px; font-size:0.98rem;}
-  .about-copy p strong{color:var(--text); font-weight:500;}
-  .about-facts{border-left:1px solid var(--line); padding-left:32px;}
-  .fact{padding:16px 0; border-bottom:1px solid var(--line);}
-  .fact:first-child{padding-top:0;}
-  .fact .fact-label{font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-faint); margin-bottom:6px;}
-  .fact .fact-val{font-size:0.92rem; color:var(--text);}
-  @media (max-width:768px){
-    .about-layout{grid-template-columns:1fr;}
-    .about-facts{border-left:none; border-top:1px solid var(--line); padding-left:0; padding-top:32px;}
-  }
-
-  /* ---------- CASE STUDIES ---------- */
-  .case{
-    padding:32px 0;
-    border-top:1px solid var(--line);
-    display:grid;
-    grid-template-columns:200px 1fr;
-    gap:32px;
-  }
-  .case:last-child{border-bottom:1px solid var(--line);}
-  .case-co{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.85rem;
-    color:var(--text-dim);
-    text-transform:uppercase;
-    letter-spacing:0.04em;
-  }
-  .case-result{font-size:1.5rem; font-family:'Fraunces', serif; font-weight:600; color:var(--gold); margin-bottom:10px;}
-  .case-detail{color:var(--text-dim); font-size:0.92rem; max-width:56ch;}
-  @media (max-width:640px){ .case{grid-template-columns:1fr; gap:10px;} }
-
-  /* ---------- CONTACT ---------- */
-  .contact-block{border-bottom:none; text-align:left;}
-  .contact-inner{
-    display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:32px;
-  }
-  .contact-inner h2{font-size:clamp(1.8rem, 4vw, 2.6rem); max-width:16ch;}
-  .contact-links{display:flex; flex-direction:column; gap:10px; text-align:right;}
-  .contact-links a{font-size:0.95rem; color:var(--text-dim);}
-  .contact-links a:hover{color:var(--gold);}
-  @media (max-width:640px){ .contact-links{text-align:left;} }
-
-  footer{padding:32px 0; text-align:center; color:var(--text-faint); font-size:0.8rem;}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav>
   <div class="wrap">
-    <div class="nav-name">Teysha</div>
+    <a href="index.html" class="nav-name">Teysha</a>
     <div class="nav-links">
-      <a href="#fit">Who It's For</a>
-      <a href="#record">Track Record</a>
-      <a href="#services">Engagement</a>
-      <a href="#about">About</a>
+      <a href="who-its-for.html">Who It's For</a>
+      <a href="track-record.html">Track Record</a>
+      <a href="engagement.html">Engagement</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html">About</a>
     </div>
-    <a href="#contact" class="nav-cta">Start a Project</a>
+    <a href="contact.html" class="nav-cta">Start a Project</a>
   </div>
 </nav>
 
@@ -314,178 +32,93 @@
     <h1 class="headline">Quota isn't luck. It's a <em>system</em>.</h1>
     <p class="hero-sub">You've found product-market fit. Deals are closing — but not the same way twice, and you're not sure what happens when it's not you closing them. Teysha builds that repeatable system, from someone who's built it before, twice, at companies HubSpot went on to acquire.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Start a Project</a>
-      <a href="#fit" class="btn-ghost">Is this you?</a>
+      <a href="contact.html" class="btn-primary">Start a Project</a>
+      <a href="who-its-for.html" class="btn-ghost">Is this you?</a>
     </div>
     <div class="scoreboard">
       <div>
-        <div class="num" style="font-size:1.25rem;">Top Performer, Every Org</div>
+        <div class="num">Top Performer, Every Org</div>
         <div class="label">Ranked Top-Two At Four Sales Organizations</div>
       </div>
       <div>
-        <div class="num" style="font-size:1.25rem;">Deal Size, Multiplied</div>
+        <div class="num">Deal Size, Multiplied</div>
         <div class="label">A Repeatable Expansion Playbook, Not A One-Off</div>
       </div>
       <div>
-        <div class="num" style="font-size:1.25rem;">Early Hire, Twice Acquired</div>
+        <div class="num">Early Hire, Twice Acquired</div>
         <div class="label">Joined Early At Two Companies HubSpot Later Bought</div>
       </div>
     </div>
   </div>
 </header>
 
-<section id="fit">
+<section>
   <div class="wrap">
     <div class="section-head">
       <div class="section-tag">Who This Is For</div>
       <h2>Built for the stage right after product-market fit.</h2>
-      <p>Not a full sales org yet. Not still pre-revenue either. This is for the founders and early GTM leads in between.</p>
+      <p>Not a full sales org yet. Not still pre-revenue either. This is for the founders and early GTM leads in between — where deals close, but no two the same way.</p>
     </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Deals close, but no two the same way</h3>
-        <p>Every closed deal so far has its own story. There's no shared playbook for how a deal is supposed to go, which makes the next hire's ramp slower than it should be.</p>
-      </div>
-      <div class="service-card">
-        <h3>Pipeline depends on one person</h3>
-        <p>Founder-led sales or a single early rep is carrying the whole motion. It works today, but it's not something you could hand off or hire into tomorrow.</p>
-      </div>
-      <div class="service-card">
-        <h3>Deal size is stuck below the product's ceiling</h3>
-        <p>The product can clearly support bigger accounts, but the sales motion hasn't caught up — pricing, positioning, and process are still calibrated for the earliest, smallest customers.</p>
-      </div>
-      <div class="service-card">
-        <h3>You're evaluating a lot of consultants right now</h3>
-        <p>Most are pitching frameworks. What's usually missing is someone who's personally built and run this exact system inside a startup — not advised on one from the outside.</p>
-      </div>
+    <div class="section-foot">
+      <a href="who-its-for.html" class="btn-ghost">See if this is you →</a>
     </div>
   </div>
 </section>
 
-<section id="record">
+<section>
   <div class="wrap">
     <div class="section-head">
-      <div class="section-tag">Track Record</div>
-      <h2>A consistent pattern, not a lucky year.</h2>
-      <p>Top-two performance repeats across companies, motions, and market conditions — the mark of a system, not a streak.</p>
+      <div class="section-tag">Case Studies</div>
+      <h2>Three stops. Three different problems solved.</h2>
+      <p>Applied results, not theory — plus training from a Fortune 500 outside sales org and Gartner's enterprise sales methodology.</p>
     </div>
-
-    <div class="ledger">
-      <div class="ledger-row" style="grid-template-columns:110px 1fr;">
-        <div class="ledger-year mono">2025–26</div>
-        <div class="ledger-context"><strong>Warmly</strong> — Ranked among the top Mid-Market/Enterprise AEs company-wide; helped lead the team's move upmarket; company entered an agreement to be acquired by HubSpot in 2026</div>
-      </div>
-      <div class="ledger-row" style="grid-template-columns:110px 1fr;">
-        <div class="ledger-year mono">2021–25</div>
-        <div class="ledger-context"><strong>Clearbit</strong> — Early sales hire on an acquisition-track SaaS company, acquired by HubSpot in 2024; ranked #1 by new logos on a 22-person team; promoted to Team Lead</div>
-      </div>
-      <div class="ledger-row" style="grid-template-columns:110px 1fr;">
-        <div class="ledger-year mono">2020–21</div>
-        <div class="ledger-context"><strong>Birdeye</strong> — Ranked among the top AEs in segment by closed business</div>
-      </div>
-      <div class="ledger-row" style="grid-template-columns:110px 1fr;">
-        <div class="ledger-year mono">2017–19</div>
-        <div class="ledger-context"><strong>Spotio</strong> — Closed the company's first six-figure deals; grew average deal size several times over; promoted to Sales Team Lead</div>
-      </div>
+    <div class="case-preview-grid">
+      <a href="case-warmly.html" class="case-preview-card">
+        <div class="case-co">Warmly · Agreement to be acquired by HubSpot, 2026</div>
+        <h3>Moving a motion upmarket</h3>
+        <p>Helped drive the company's shift toward larger accounts, growing average deal size substantially without slowing the sales cycle down.</p>
+        <div class="read-more">Read the case study →</div>
+      </a>
+      <a href="case-clearbit.html" class="case-preview-card">
+        <div class="case-co">Clearbit · Acquired by HubSpot, 2024</div>
+        <h3>A playbook that outlived the rep</h3>
+        <p>Built outbound sequences and messaging that were rolled out across the full AE team and kept working after handoff.</p>
+        <div class="read-more">Read the case study →</div>
+      </a>
+      <a href="case-spotio.html" class="case-preview-card">
+        <div class="case-co">Spotio</div>
+        <h3>Setting the ceiling higher</h3>
+        <p>Closed the company's first six-figure deals and turned outbound from an afterthought into a real revenue channel.</p>
+        <div class="read-more">Read the case study →</div>
+      </a>
+    </div>
+    <div class="section-foot">
+      <a href="case-studies.html" class="btn-ghost">See all case studies →</a>
     </div>
   </div>
 </section>
 
-<section id="services">
+<section>
   <div class="wrap">
     <div class="section-head">
       <div class="section-tag">Engagement</div>
       <h2>A scoped project, not an ongoing hire.</h2>
-      <p>Teysha engagements run in parallel with a full-time AE role, which shapes the model on purpose: a focused, time-boxed project with a clear deliverable, not day-to-day management. Most engagements run 4–8 weeks across three phases.</p>
+      <p>Every engagement moves through the same three phases: Audit, Build, Handoff — a focused, time-boxed project with a clear deliverable, not day-to-day management.</p>
     </div>
-    <div class="services-grid cols-3">
-      <div class="service-card">
-        <span class="num mono">01</span>
-        <h3>Audit</h3>
-        <p>A full-cycle review of how deals actually get won today — discovery, demo, negotiation, hand-off — to find exactly where the current motion depends on one person's instincts instead of a repeatable process.</p>
-      </div>
-      <div class="service-card">
-        <span class="num mono">02</span>
-        <h3>Build</h3>
-        <p>The system itself: outbound infrastructure that self-sources pipeline, and a pricing/positioning framework calibrated to what the product can actually support — not just what the first customers happened to pay.</p>
-      </div>
-      <div class="service-card">
-        <span class="num mono">03</span>
-        <h3>Handoff</h3>
-        <p>Documentation and coaching so the system runs without me — the same 1:1 coaching structure used to onboard BDRs and AEs as a promoted Team Lead, adapted to a team of one or two.</p>
-      </div>
+    <div class="section-foot">
+      <a href="engagement.html" class="btn-ghost">See how it works →</a>
     </div>
   </div>
 </section>
 
-<section id="about">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-tag">About</div>
-      <h2>From the classroom to the top of the leaderboard.</h2>
-    </div>
-    <div class="about-layout">
-      <div class="about-copy">
-        <p>I spent the first part of my career teaching and coaching in a Title I junior high school, then managing seasonal staff for a summer camp serving 8,000 campers a year. Both jobs required the same skill sales does: getting people who don't yet trust you to say yes to something that's good for them.</p>
-        <p>Over ten years in SaaS sales, I've ranked in the <strong>top two of my sales organization</strong> at multiple companies — including as an early sales hire at two separate startups later acquired by HubSpot — across new-business, enterprise, and overlay motions. I've also been the person building the systems other reps use: outbound sequences adopted team-wide, a new go-to-market segment built from scratch, and a Team Lead track coaching both BDRs and AEs.</p>
-        <p>Teysha is a return to what I did first — teaching a skill — applied to the discipline I've spent a decade mastering.</p>
-      </div>
-      <div class="about-facts">
-        <div class="fact"><div class="fact-label">Experience</div><div class="fact-val">10 years full-cycle B2B sales</div></div>
-        <div class="fact"><div class="fact-label">Education</div><div class="fact-val">BBA, Business Management — Dallas Baptist University (3.8 GPA)</div></div>
-        <div class="fact"><div class="fact-label">Training</div><div class="fact-val">Sandler Training, Conscious Selling</div></div>
-        <div class="fact"><div class="fact-label">Civic</div><div class="fact-val">Chair, Arlington ISD Financial Future Committee; Arlington Parks &amp; Recreation Board</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="cases">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-tag">Case Studies</div>
-      <h2>Applied results, not theory.</h2>
-    </div>
-
-    <div class="case">
-      <div class="case-co">Warmly · Agreement to be acquired by HubSpot, 2026</div>
-      <div>
-        <div class="case-result">Moving a motion upmarket</div>
-        <p class="case-detail">Helped drive the company's shift toward larger accounts, growing average deal size substantially while holding sales cycle length steady — proof that deal-size expansion doesn't have to cost velocity.</p>
-      </div>
-    </div>
-
-    <div class="case">
-      <div class="case-co">Spotio</div>
-      <div>
-        <div class="case-result">Setting the ceiling higher</div>
-        <p class="case-detail">Closed the first six-figure deals in company history and grew outbound's share of revenue from a small fraction of the business to a meaningful, repeatable channel.</p>
-      </div>
-    </div>
-
-    <div class="case">
-      <div class="case-co">Clearbit · Acquired by HubSpot, 2024</div>
-      <div>
-        <div class="case-result">Outbound playbook adopted company-wide</div>
-        <p class="case-detail">Joined as an early sales hire and built outbound sequences and messaging later rolled out across the full AE team to sustain pipeline generation through a period of rapid headcount growth; selected for multiple beta teams to pressure-test new products ahead of GTM rollout.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="contact-block" id="contact">
+<section class="contact-block">
   <div class="wrap">
     <div class="contact-inner">
       <div>
         <h2>No pitch. Just a conversation about your pipeline.</h2>
-        <p style="color:var(--text-dim); font-size:0.92rem; margin-top:14px; max-width:46ch;">Best fit is a defined-scope project, not an ongoing retainer or in-house role — engagements run alongside a full-time AE position, so scope and timeline get set up front.</p>
+        <p style="color:var(--text-dim); font-size:0.92rem; margin-top:14px; max-width:46ch;">Best fit is a defined-scope project, not an ongoing retainer or in-house role.</p>
       </div>
-      <div class="contact-links">
-        <a href="mailto:blakealandavidson@gmail.com">blakealandavidson@gmail.com</a>
-        <a href="tel:8179174633">(817) 917-4633</a>
-        <a href="https://linkedin.com/in/blakealandavidson" target="_blank" rel="noopener">linkedin.com/in/blakealandavidson</a>
-      </div>
+      <a href="contact.html" class="btn-primary">Start a Project</a>
     </div>
   </div>
 </section>
