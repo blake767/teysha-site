@@ -39,9 +39,36 @@
       <div>
         <p>Best fit is a defined-scope project — an Audit, a Build, or both — not an ongoing retainer or in-house role. Engagements run alongside a full-time AE position, so scope and timeline get set up front before anything starts.</p>
         <p>If you're a founder or early GTM lead who's found product-market fit and is starting to feel the seams in your sales motion, send a note with a little context on where you're at and what's prompting the search.</p>
+
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none;">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+          <div class="form-two-col">
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company">
+          </div>
+          <div class="form-row">
+            <label for="message">What's going on with your sales process?</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send</button>
+          <p class="form-note">Goes straight to Blake — usually a reply within a couple of days.</p>
+        </form>
       </div>
       <div class="about-facts" style="border-left:none; padding-left:0;">
-        <div class="fact"><div class="fact-label">Email</div><div class="fact-val"><a href="mailto:blakealandavidson@gmail.com" style="color:var(--gold);">blakealandavidson@gmail.com</a></div></div>
+        <div class="fact"><div class="fact-label">Email</div><div class="fact-val"><a href="mailto:blake@teysha.ai" style="color:var(--gold);">blake@teysha.ai</a></div></div>
         <div class="fact"><div class="fact-label">Phone</div><div class="fact-val"><a href="tel:8179174633">(817) 917-4633</a></div></div>
         <div class="fact"><div class="fact-label">LinkedIn</div><div class="fact-val"><a href="https://linkedin.com/in/blakealandavidson" target="_blank" rel="noopener">linkedin.com/in/blakealandavidson</a></div></div>
         <div class="fact"><div class="fact-label">Based In</div><div class="fact-val">Arlington, TX</div></div>
