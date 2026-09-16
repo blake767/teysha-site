@@ -66,6 +66,32 @@ nav .wrap{ display:flex; align-items:center; justify-content:space-between; heig
 }
 .nav-phone:hover{ color:var(--gold); }
 @media (max-width:640px){ .nav-phone{display:none;} }
+
+/* ---------- HEADSHOT ---------- */
+.headshot{
+  width:100%;
+  max-width:220px;
+  aspect-ratio:1;
+  object-fit:cover;
+  border:1px solid var(--line);
+  margin-bottom:24px;
+}
+.headshot-inline{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border:1px solid var(--line-strong);
+  flex-shrink:0;
+}
+.why-local-layout{
+  display:flex;
+  gap:28px;
+  align-items:flex-start;
+  margin-bottom:20px;
+}
+@media (max-width:640px){
+  .why-local-layout{ flex-direction:column; align-items:flex-start; }
+}
 @media (max-width:768px){ .nav-links{display:none;} }
 
 /* ---------- HERO (home) ---------- */
