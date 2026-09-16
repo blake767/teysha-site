@@ -57,6 +57,15 @@ nav .wrap{ display:flex; align-items:center; justify-content:space-between; heig
   white-space:nowrap;
 }
 .nav-cta:hover{border-color:var(--gold); color:var(--gold);}
+.nav-phone{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.85rem;
+  color:var(--text-dim);
+  margin-right:16px;
+  white-space:nowrap;
+}
+.nav-phone:hover{ color:var(--gold); }
+@media (max-width:640px){ .nav-phone{display:none;} }
 @media (max-width:768px){ .nav-links{display:none;} }
 
 /* ---------- HERO (home) ---------- */
