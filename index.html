@@ -27,6 +27,9 @@
 </nav>
 
 <header class="hero">
+  <div class="hero-watermark">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="45" fill="none" stroke="#1B2B4A" stroke-width="3"/><g fill="none" stroke="#1B2B4A" stroke-width="2.4" stroke-linejoin="round"><polygon points="50,16 84,50 50,84 16,50"/><polygon points="50,16 84,50 50,84 16,50" transform="rotate(45 50 50)"/></g></svg>
+  </div>
   <div class="wrap">
     <div class="eyebrow">Your Ally in the Field, on the Phone, and Online</div>
     <h1 class="headline">Never miss a <em>job</em> again.</h1>
@@ -52,12 +55,16 @@
   </div>
 </header>
 
-<section>
+<section class="section-dark">
   <div class="wrap">
     <div class="section-head">
       <div class="section-tag">The Problem</div>
       <h2>The phone doesn't stop ringing just because you're on a roof.</h2>
-      <p>Your best people are also your technicians — which means the phone rings while they're elbow-deep in a repair, on a ladder, or driving between stops. A homeowner calls 3–5 companies for every job, and the data is blunt: whoever answers first usually wins it, and a voicemail almost never gets a callback. Every missed call is money you already spent on a lead, thrown away.</p>
+      <p>Your best people are also your technicians — which means the phone rings while they're elbow-deep in a repair, on a ladder, or driving between stops. A homeowner calls 3–5 companies for every job, and the data is blunt: whoever answers first usually wins it, and a voicemail almost never gets a callback.</p>
+    </div>
+    <div class="big-stat">
+      <div class="figure">$300–$1,200</div>
+      <div class="figure-label">the typical revenue lost every time a call goes unanswered — money you already spent to get that lead in the first place.</div>
     </div>
   </div>
 </section>
@@ -71,17 +78,17 @@
     </div>
     <div class="services-grid cols-3">
       <div class="service-card">
-        <span class="num mono">01</span>
+        <div class="icon-circle c-gold"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
         <h3>Never Miss a Call</h3>
         <p>Every call gets answered — day or night. If it can't be resolved live, the caller gets an instant text back so they're not left wondering. The job gets booked straight onto your calendar.</p>
       </div>
       <div class="service-card">
-        <span class="num mono">02</span>
+        <div class="icon-circle c-teal"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         <h3>Quote Follow-Up</h3>
         <p>Every estimate you send gets automatic follow-up until it's won or explicitly lost — instead of dying quietly in a text thread you forgot to check.</p>
       </div>
       <div class="service-card">
-        <span class="num mono">03</span>
+        <div class="icon-circle c-amber"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
         <h3>Reputation & Reviews</h3>
         <p>The moment a job is marked complete, a review request goes out automatically — so your Google ranking keeps climbing instead of quietly decaying from neglect.</p>
       </div>
@@ -124,36 +131,42 @@
     </div>
     <div class="industries-grid">
       <a href="hvac.html" class="industries-card">
+        <div class="icon-circle c-gold"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="5"/><g stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g></svg></div>
         <div class="ind-tag">HVAC</div>
         <h3>Your busiest week is when you miss the most calls</h3>
         <p>3–4x call volume in the first heat wave — right when your crew is too slammed to answer.</p>
         <div class="read-more">See the HVAC page →</div>
       </a>
       <a href="roofing.html" class="industries-card">
+        <div class="icon-circle c-teal"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 10l9-7 9 7"/><path d="M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9"/><path d="M9 21v-7h6v7"/></svg></div>
         <div class="ind-tag">Roofing</div>
         <h3>Crews are on the roof. Nobody's answering the phone</h3>
         <p>The highest missed-call rates of any trade — worst right after a storm, when demand spikes hardest.</p>
         <div class="read-more">See the Roofing page →</div>
       </a>
       <a href="pest-control.html" class="industries-card">
+        <div class="icon-circle c-amber"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="13" rx="4" ry="6"/><circle cx="12" cy="5" r="2"/><g stroke-linecap="round"><line x1="8" y1="10" x2="4" y2="8"/><line x1="8" y1="14" x2="3" y2="14"/><line x1="8" y1="18" x2="4" y2="20"/><line x1="16" y1="10" x2="20" y2="8"/><line x1="16" y1="14" x2="21" y2="14"/><line x1="16" y1="18" x2="20" y2="20"/></g></svg></div>
         <div class="ind-tag">Pest Control</div>
         <h3>The phone rings in an empty truck</h3>
         <p>Solo operators driving between stops miss more calls than almost any other trade.</p>
         <div class="read-more">See the Pest Control page →</div>
       </a>
       <a href="landscape.html" class="industries-card">
+        <div class="icon-circle c-gold"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C7 5 4 10 4 14a8 8 0 0 0 8 8 8 8 0 0 0 8-8c0-4-3-9-8-11z"/><line x1="12" y1="6" x2="12" y2="21" stroke-linecap="round"/></svg></div>
         <div class="ind-tag">Landscape</div>
         <h3>Repeat customers live or die on follow-up</h3>
         <p>A relationship business — the quote that never gets followed up is revenue quietly left on the table.</p>
         <div class="read-more">See the Landscape page →</div>
       </a>
       <a href="pool-maintenance.html" class="industries-card">
+        <div class="icon-circle c-teal"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
         <div class="ind-tag">Pool Maintenance</div>
         <h3>Recurring revenue depends on trust you keep earning</h3>
         <p>Subscription-style billing means every missed call is a customer you never got at all.</p>
         <div class="read-more">See the Pool Maintenance page →</div>
       </a>
       <a href="industries.html" class="industries-card">
+        <div class="icon-circle c-amber"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
         <div class="ind-tag">All Industries</div>
         <h3>See the full breakdown</h3>
         <p>One page, every trade, side by side.</p>

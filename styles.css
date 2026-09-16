@@ -428,3 +428,75 @@ footer{padding:32px 0; text-align:center; color:var(--text-faint); font-size:0.8
   letter-spacing:0.04em;
   margin-top:16px;
 }
+
+/* ---------- ICON CIRCLES ---------- */
+.icon-circle{
+  width:52px; height:52px;
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom:18px;
+}
+.icon-circle svg{ width:26px; height:26px; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.icon-circle.c-gold{ background:rgba(196,112,75,0.14); }
+.icon-circle.c-gold svg{ stroke:var(--gold); }
+.icon-circle.c-teal{ background:rgba(42,140,130,0.14); }
+.icon-circle.c-teal svg{ stroke:var(--teal); }
+.icon-circle.c-amber{ background:rgba(200,150,62,0.16); }
+.icon-circle.c-amber svg{ stroke:var(--amber); }
+
+/* ---------- CARD LIFT ---------- */
+.service-card, .industries-card, .case-preview-card{
+  transition:transform 0.15s ease, box-shadow 0.15s ease;
+}
+.service-card:hover, .industries-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 24px rgba(27,43,74,0.12);
+  position:relative;
+  z-index:1;
+}
+
+/* ---------- DARK CONTRAST SECTION ---------- */
+section.section-dark{
+  background:var(--text);
+  border-bottom:1px solid var(--text);
+}
+section.section-dark .section-tag{ color:var(--amber); }
+section.section-dark h2, section.section-dark h1{ color:var(--bg); }
+section.section-dark .section-head p, section.section-dark p{ color:#C7C2B2; }
+section.section-dark .scoreboard{ background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.16); }
+section.section-dark .scoreboard .num{ color:var(--amber); }
+section.section-dark .scoreboard .label{ color:#C7C2B2; }
+section.section-dark .btn-ghost{ color:#C7C2B2; border-color:rgba(255,255,255,0.3); }
+section.section-dark .btn-ghost:hover{ color:var(--bg); border-color:var(--amber); }
+
+/* ---------- HERO WATERMARK ---------- */
+header.hero{ position:relative; overflow:hidden; }
+.hero-watermark{
+  position:absolute;
+  top:-80px; right:-80px;
+  width:420px; height:420px;
+  opacity:0.05;
+  pointer-events:none;
+}
+header.hero .wrap{ position:relative; z-index:1; }
+
+/* ---------- BIG STAT CALLOUT ---------- */
+.big-stat{
+  display:flex;
+  align-items:baseline;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:8px;
+}
+.big-stat .figure{
+  font-family:'Cormorant SC', serif;
+  font-weight:700;
+  font-size:clamp(3rem, 8vw, 5.5rem);
+  color:var(--amber);
+  line-height:1;
+}
+.big-stat .figure-label{
+  font-size:1.1rem;
+  color:#C7C2B2;
+  max-width:32ch;
+}
